@@ -1,0 +1,116 @@
+.banner {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  box-sizing: border-box;
+  padding: 2.5rem;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.filter {
+  cursor: pointer;
+  width: 23.5rem;
+  height: 23.5rem;
+  border-radius: 3.6rem;
+  position: relative;
+  text-align: center;
+}
+
+.border_filter {
+  border: 5px solid #73abff;
+}
+
+.all_img,
+.medical_img,
+.travel_img,
+.movie_img,
+.education_img,
+.food_img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 3.6rem;
+  opacity: 0.8;
+}
+
+.heading_all,
+.heading_medical,
+.heading_travel,
+.heading_movie,
+.heading_education,
+.heading_food {
+  color: white;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.wrapper_all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 500px) and (min-width: 200px) {
+  .banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    overflow-x: scroll;
+  }
+
+  .filter {
+    cursor: pointer;
+    width: 14.2rem;
+    height: 9.5rem;
+    border-radius: 1.5rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  .all_img,
+  .medical_img,
+  .travel_img,
+  .movie_img,
+  .education_img,
+  .food_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 3.6rem;
+    opacity: 0.8;
+  }
+
+  .heading_all,
+  .heading_medical,
+  .heading_travel,
+  .heading_movie,
+  .heading_education,
+  .heading_food {
+    color: white;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .wrapper_all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

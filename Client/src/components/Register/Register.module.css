@@ -1,0 +1,109 @@
+.formHeader {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+.formContainer {
+  width: 80%;
+  font-weight: 700;
+}
+
+.formContainer_div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.formContainer_label {
+  width: 100px;
+  font-size: 2rem;
+}
+.input {
+  padding: 10px;
+  width: 250px;
+  color: #8e8e8e;
+  font-weight: 700;
+  border: 2px solid #8e8e8e;
+}
+
+.formContainer_button {
+  background-color: #73abff;
+  color: #000;
+  font-weight: 700;
+  font-size: 2rem;
+
+  cursor: pointer;
+  width: 13.6rem;
+  height: 4.5rem;
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+  font-family: DM Sans;
+  font-style: normal;
+  line-height: normal;
+}
+
+.error {
+  color: #ff0e0e;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.signInBtn {
+  color: #000;
+  font-weight: 700;
+  background-color: var(--secondary-color);
+}
+
+.passwordContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.passwordIcon {
+  position: absolute;
+  top: 50%;
+  right: 55px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .formHeader {
+    font-size: 1.5rem;
+  }
+  .formContainer_div {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .passwordContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .passwordIcon {
+    right: 45px;
+    top: 75%;
+  }
+}
+
+@media (max-width: 515px) {
+  .passwordIcon {
+    right: 30px;
+    top: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .passwordIcon {
+    right: 0;
+    top: 75%;
+  }
+}

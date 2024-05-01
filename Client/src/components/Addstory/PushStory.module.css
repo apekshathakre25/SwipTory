@@ -1,0 +1,110 @@
+.slideContainer {
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.slideNumber,
+.addSlide {
+  position: relative;
+  width: 100%;
+  min-height: 65px;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  font-weight: 700;
+  box-shadow: 0px 4px 15px 0px #0000001a;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+
+.modalCloseIcon {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  scale: 0.5;
+  cursor: pointer;
+}
+
+.formContainer {
+  width: 100%;
+  font-weight: 700;
+}
+
+.formContainer_div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.formContainer_label {
+  width: 100px;
+  font-size: 2rem;
+}
+
+.formContainer_input {
+  padding: 10px;
+  width: 250px;
+  color: #8e8e8e;
+  font-weight: 700;
+  border: 2px solid #8e8e8e;
+}
+
+.btnContainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.leftBtnContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.prevBtn,
+.nextBtn,
+.postBtn {
+  cursor: pointer;
+  display: flex;
+  width: 10.5rem;
+  height: 3.7rem;
+  border-radius: 2rem;
+  background: #7eff73;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.prevBtn {
+  background-color: #7eff73;
+}
+
+.nextBtn {
+  background-color: #73abff;
+}
+
+.postBtn {
+  background-color: #ff7373;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+}
