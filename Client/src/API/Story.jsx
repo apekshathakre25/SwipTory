@@ -1,5 +1,5 @@
 import axios from "axios";
-const backEndUrl = `http://localhost:4004/api/v1`;
+const backEndUrl = `https://swiptory-stgh.onrender.com/api/v1`;
 
 export const createStory = async (requestPayload) => {
   try {

@@ -5,11 +5,8 @@ import { getStoryById } from "../../API/Story";
 import { swiptoryContext } from "../../Context/Context";
 
 const Slide = ({ slides }) => {
-  // const [searchParams] = useSearchParams();
-  // const { id } = useParams();
   const { openedStoryId, setOpenedStorySlides, setIsSliderOpen } =
     useContext(swiptoryContext);
-  // const [slideData, setSlideData] = useState(null);
 
   useEffect(() => {
     async function fetchSlide() {
@@ -25,13 +22,8 @@ const Slide = ({ slides }) => {
     fetchSlide();
   }, []);
 
-  // if (!slideData) {
-  //   return <> </>;
-  // }
-
   return (
     <>
-      {/* <h1>hello</h1> */}
       <Slider setIsSliderOpen={setIsSliderOpen} slides={slides} />
     </>
   );

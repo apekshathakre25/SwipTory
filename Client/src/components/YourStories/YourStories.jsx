@@ -2,12 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import styles from "./YourStories.module.css";
 import Story from "../Story/Story";
 import { getAllStories } from "../../API/Story";
-import { swiptoryContext } from "../../Context/Context";
 
 const YourStories = (props) => {
   const [yourStories, setYourStories] = useState([]);
   const [maxStoriesInRow, setMaxStoriesInRow] = useState(4);
-  const { isSliderOpen, setIsSliderOpen } = useContext(swiptoryContext);
 
   useEffect(() => {
     const fecthUserStories = async () => {
@@ -49,8 +47,7 @@ const YourStories = (props) => {
                   : maxStoriesInRow + 4
               )
             }
-            className={styles.seemoreBtn}
-          >
+            className={styles.seemoreBtn}>
             See more
           </button>
         )}

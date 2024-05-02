@@ -14,7 +14,6 @@ import { addStoryToBookmarks, removeFromBookmarks } from "../../API/User";
 import { likeStory, removeLike } from "../../API/Story";
 
 const Slider = (props) => {
-  const navigate = useNavigate();
   const slideDuration = 4000;
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const {
@@ -114,15 +113,9 @@ const Slider = (props) => {
         slideId: slides[slideIndex]?._id,
       };
 
-      // console.log(argument);
-
       if (!bookmarkStatus[slideIndex]) {
         const response = await addStoryToBookmarks(argument);
-        // fetchBookmarkStatus();
-        // const newBookmarkStatus = [...bookmarkStatus];
-        // newBookmarkStatus[slideIndex] = true;
-        // setBookmarkStatus(newBookmarkStatus);
-        // console.log("hello");
+
         setUserDetails(response);
         response.bookmarkedStories.forEach((bookmark) => {
           bookmark.slideId.forEach((id) => {
@@ -135,10 +128,7 @@ const Slider = (props) => {
         });
       } else if (bookmarkStatus[slideIndex]) {
         const response = await removeFromBookmarks(argument);
-        // fetchBookmarkStatus();
-        // const newBookmarkStatus = [...bookmarkStatus];
-        // newBookmarkStatus[slideIndex] = false;
-        // setBookmarkStatus(newBookmarkStatus);
+
         setUserDetails(response);
         response.bookmarkedStories.forEach((bookmark) => {
           bookmark.slideId.forEach((id) => {
@@ -292,7 +282,7 @@ const Slider = (props) => {
                   handleLike(currentSlideIndex);
                 }}
                 src={likeStatus[currentSlideIndex] ? redLikeIcon : likeIcon}
-                // src={likeIcon}
+                
                 alt="like icon"
               />
             ) : (
@@ -301,7 +291,7 @@ const Slider = (props) => {
                   handleLike(currentSlideIndex);
                 }}
                 src={likeIcon}
-                // src={likeIcon}
+                
                 alt="like icon"
               />
             )}

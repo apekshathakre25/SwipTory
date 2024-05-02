@@ -51,9 +51,6 @@ const Story = (props) => {
   return (
     <div className={styles.wrapper}>
       <div
-        // onClick={() => {
-        //   props.handleStoryViewer(props.story.slides);
-        // }}
         onClick={handleStoryClick}
         className={styles.categoryStory}
         style={{

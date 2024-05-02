@@ -1,5 +1,5 @@
 import axios from "axios";
-const backEndUrl = `http://localhost:4004/api/v1/auth`;
+const backEndUrl = `https://swiptory-stgh.onrender.com/api/v1/auth`;
 
 export const getUserDetails = async () => {
   try {
@@ -8,7 +8,7 @@ export const getUserDetails = async () => {
       throw new Error("User ID not found in localStorage");
     }
 
-    const reqUrl = `http://localhost:4004/api/v1/auth/userDetails?userId=${userId}`;
+    const reqUrl = `https://swiptory-stgh.onrender.com/api/v1/auth/userDetails?userId=${userId}`;
     const response = await axios.get(reqUrl);
     const data = response.data;
     // console.log(data);
