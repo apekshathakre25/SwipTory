@@ -142,23 +142,20 @@ const Navbar = () => {
               <div className={styles.heading_name}>
                 <img src={avatar} className={styles.avatar} alt="avatar" />
                 <h1 className={styles.your_name}>
-                  {" "}
                   {userDetails?.username ? userDetails?.username : "Hello!!"}
                 </h1>
                 <div
                   className={styles.mb_close_login}
-                  onClick={HandleOnClickHamburgerIcon}
-                >
+                  onClick={HandleOnClickHamburgerIcon}>
                   <img src={crossIcon} alt="" className={styles.x_icon} />
                 </div>
               </div>
               <div className={styles.navbar_btn}>
                 <button className={styles.addstory}>Your Story</button>
                 <button
-                  className={styles.register}
-                  onClick={handleRegisterClick}
-                >
-                  Register Now
+                  className={styles.addstory}
+                  onClick={handleAddStoryClick}>
+                  Add Story
                 </button>
                 <div className={styles.bookmarkbtn}>
                   <img
@@ -190,8 +187,7 @@ const Navbar = () => {
                 <div className={styles.navbar_btn}>
                   <button
                     className={styles.register}
-                    onClick={handleRegisterClick}
-                  >
+                    onClick={handleRegisterClick}>
                     Register Now
                   </button>
                   <button className={styles.signin} onClick={handleSignClick}>
