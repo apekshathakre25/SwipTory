@@ -8,6 +8,7 @@ import hamburger from "../../assets/hamburger.png";
 import crossIcon from "../../assets/cross.png";
 import avatar from "../../assets/avatar.png";
 import AddStory from "../Addstory/PushStory";
+import MobileAddStory from "../MobileAddStory/MobileAddStory";
 import { swiptoryContext } from "../../Context/Context";
 
 const Navbar = () => {
@@ -120,13 +121,18 @@ const Navbar = () => {
         )
       )}
 
-      {showAddStory && (
-        <AddStory
-          showAddStory={showAddStory}
-          setShowAddStory={setShowAddStory}
-        />
-      )}
-
+      {showAddStory &&
+        (innerWidth > 500 ? (
+          <AddStory
+            showAddStory={showAddStory}
+            setShowAddStory={setShowAddStory}
+          />
+        ) : (
+          <MobileAddStory
+            showAddStory={showAddStory}
+            setShowAddStory={setShowAddStory}
+          />
+        ))}
       {localStorage.getItem("userId") !== null && innerWidth <= 500 ? (
         <>
           <div className={styles.navcontainer}>

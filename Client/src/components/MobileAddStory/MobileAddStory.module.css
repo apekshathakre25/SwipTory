@@ -1,9 +1,17 @@
+.header {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
 .slideContainer {
   width: 95%;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
   margin-bottom: 20px;
+  flex-direction: column;
+  text-align: center;
 }
 
 .slideNumber,
@@ -22,7 +30,7 @@
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .modalCloseIcon {
@@ -39,15 +47,14 @@
 }
 
 .formContainer_div {
+  align-items: flex-start;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 18px;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
-.formContainer_category {
-  display: flex;
-  gap: 9rem;
-}
+
 .formContainer_label {
   width: 100px;
   font-size: 1.5rem;
@@ -55,7 +62,7 @@
 
 .formContainer_input {
   padding: 10px;
-  width: 250px;
+  width: 175px;
   color: #8e8e8e;
   font-weight: 700;
   border: 2px solid #8e8e8e;
@@ -110,4 +117,21 @@
   color: red;
   font-size: 1rem;
   font-weight: 700;
+}
+
+.mobileStoryWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  column-gap: 3rem;
+}
+.mobileFormWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  justify-content: center;
+  width: 100%;
 }

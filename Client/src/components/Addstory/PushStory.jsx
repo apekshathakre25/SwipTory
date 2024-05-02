@@ -139,7 +139,7 @@ const AddStory = ({ showAddStory, setShowAddStory }) => {
         handleCategoryChange={handleCategoryChange}
       />
 
-      <div className={styles.formContainer_div}>
+      <div className={styles.formContainer_category}>
         <label className={styles.formContainer_label}>Category:</label>
         <select
           onChange={(e) => handleCategoryChange(e.target.value)}
