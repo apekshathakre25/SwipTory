@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Register from "../Register/Register";
 import SignIn from "../SignIn/SignIn";
@@ -20,6 +20,7 @@ const Navbar = () => {
     useContext(swiptoryContext);
   const navigate = useNavigate();
 
+  // console.log(userDetails?.username);
   const handleRegisterClick = () => {
     setShowRegister(true);
     setShowSignIn(false);
@@ -68,14 +69,14 @@ const Navbar = () => {
 
       {localStorage.getItem("userId") !== null && innerWidth > 500 ? (
         <div className={styles.navcontainer}>
-          <div className={styles.bookmarkbtn}>
+          <Link to="/bookmarks" className={styles.bookmarkbtn}>
             <img
               src={bookmarkIcon}
               alt="Bookmark"
               className={styles.bookmark_img}
             />
             <p className={styles.bookmarks}>Bookmarks</p>
-          </div>
+          </Link>
           <button className={styles.addstory} onClick={handleAddStoryClick}>
             Add Story
           </button>
@@ -146,16 +147,18 @@ const Navbar = () => {
                 </h1>
                 <div
                   className={styles.mb_close_login}
-                  onClick={HandleOnClickHamburgerIcon}>
+                  onClick={HandleOnClickHamburgerIcon}
+                >
                   <img src={crossIcon} alt="" className={styles.x_icon} />
                 </div>
               </div>
               <div className={styles.navbar_btn}>
                 <button className={styles.addstory}>Your Story</button>
                 <button
-                  className={styles.addstory}
-                  onClick={handleAddStoryClick}>
-                  Add Story
+                  className={styles.register}
+                  onClick={handleRegisterClick}
+                >
+                  Register Now
                 </button>
                 <div className={styles.bookmarkbtn}>
                   <img
@@ -187,7 +190,8 @@ const Navbar = () => {
                 <div className={styles.navbar_btn}>
                   <button
                     className={styles.register}
-                    onClick={handleRegisterClick}>
+                    onClick={handleRegisterClick}
+                  >
                     Register Now
                   </button>
                   <button className={styles.signin} onClick={handleSignClick}>
